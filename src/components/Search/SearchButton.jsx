@@ -14,3 +14,8 @@ const SearchButton = () => {
     console.log(userValue);
   };
 
+  // when click search button,page navigate to search component
+  const clickHandler = () => {
+    navigate("/campaigns/search");
+  };
+
