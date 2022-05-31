@@ -1,3 +1,18 @@
+# Assessment App
+
+https://assessment-0.netlify.app/
+
+This app created by react js and tailwind css.
+
+As a user, you can route  campaigns and settings pages,
+you can switch Dark/lite theme.
+Also you can search in web, what you want!
+
+Assessment App is a Progressive Web App. enjoy!
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
