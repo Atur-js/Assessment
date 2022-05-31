@@ -35,3 +35,24 @@ export const Sidebar = () => {
             </button>
           </Link>
         </div>
+
+        <div className="pl-3 sm:pl-1">
+          <Link to="/settings">
+            <button
+              class="dark:text-white flex justify-center bg-transparent
+              hover:text-white hover:bg-[#6864CF] text-black font-semibold  py-2
+              px-4 hover:border-transparent rounded-lg w-[150px] sm:w-[70px] md:w-[100px]
+              sm:-ml-1 md:-ml-3"
+            >
+              <div className="-ml-2">
+                <Settings class="w-6 h-6 sm:ml-4 mr-3 md:ml-2  fill-black dark:fill-white " />
+              </div>
+              <p className="block sm:hidden  w-[100px] sm:w-[0]">Settings</p>
+            </button>
+          </Link>
+        </div>
+
+      </div>
+    </>
+  );
+};
