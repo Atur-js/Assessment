@@ -19,11 +19,19 @@ function App() {
             className=" flex flex-col m-16 lg:m-5 md:m-6 sm:m-1
             dark:border-[#4d4d4d] border-2  w-screen h-5/6 rounded-xl
             shadow-[0_20px_70px_5px_rgba(0,0,0,0.5)]"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+          >
+            <Sidebar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/campaigns" element={<Campaigns />} />
+              <Route path="/google" element={<Google />} />
+              <Route path="/campaigns/hubspot" element={<Hubspot />} />
+              <Route path="/campaigns/search" element={<Search />} />
+              <Route path="/campaigns/pipedrive" element={<Pipedrive />} />
+              <Route path="/settings" element={<Settings />} />
+              <Route path="/*" element={<Navigate to="/" />} />
+            </Routes>
+          </div>
         </div>
       </ThemeProvider>
     </>
