@@ -12,22 +12,21 @@ import {Pipedrive} from "./components/Campaigns/Pipedrive";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <ThemeProvider>
+        <div className="flex justify-center  dark:bg-[#1e1e24]">
+          <div
+            className=" flex flex-col m-16 lg:m-5 md:m-6 sm:m-1
+            dark:border-[#4d4d4d] border-2  w-screen h-5/6 rounded-xl
+            shadow-[0_20px_70px_5px_rgba(0,0,0,0.5)]"
         >
           Learn React
         </a>
       </header>
     </div>
+        </div>
+      </ThemeProvider>
+    </>
   );
 }
 
