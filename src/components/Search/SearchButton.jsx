@@ -1,11 +1,14 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router";
+import React, { useState , useContext} from "react";
+import { RoutingContext, pagesMapping } from '../../Route';
+
 
 // search button and show result
 
 const SearchButton = () => {
   const [text, setText] = useState("");
-  const navigate = useNavigate();
+
+  // routing pages
+   const { setPage } = useContext(RoutingContext);
 
   // get event.target.value
   const getInputValue = (event) => {
@@ -14,10 +17,8 @@ const SearchButton = () => {
     console.log(userValue);
   };
 
-  // when click search button,page navigate to search component
-  const clickHandler = () => {
-    navigate("/campaigns/search");
-  };
+
+  
 
   return (
     <>
@@ -42,7 +43,7 @@ const SearchButton = () => {
             </div>
             <input
               onChange={getInputValue}
-              onClick={clickHandler}
+              onClick={() => setPage(pagesMapping.search)}
               type="search"
               id="default-search"
               class="block sm:w-[20px] md:w-[30px] lg:w-[30px] xl:w-[100px] 2xl:w-[120px]
