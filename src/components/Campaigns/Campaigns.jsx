@@ -26,7 +26,7 @@ export const Campaigns = () => {
             >
               <img
                 className=" w-5 mr-1 sm:ml-2  mr-3"
-                alt="Campaigns"
+                alt="GoogleDrive"
                 src={GoogleDrive}
               />
               <p className="block sm:hidden   md:hidden">Google Drive</p>
@@ -43,7 +43,7 @@ export const Campaigns = () => {
             >
               <img
                 className=" w-5 mr-1 sm:w-10  mr-3 sm:-mr-0.5 block sm:block"
-                alt="Campaigns"
+                alt="Hubspot"
                 src={Hubspot}
               />
               <p className="block sm:hidden md:hidden">Hubspot</p>
@@ -59,7 +59,7 @@ export const Campaigns = () => {
             >
               <img
                 className=" w-5 mr-1 sm:ml-2 mr-3"
-                alt="settings"
+                alt="Pipedrive"
                 src={Pipedrive}
               />
               <p className="block sm:hidden md:text-sm md:hidden">Pipedrive</p>
