@@ -46,11 +46,10 @@ export const Sidebar = () => {
               sm:-ml-1 md:-ml-3"
             >
               <div className="-ml-2">
-                <Settings class="w-6 h-6 sm:ml-4 mr-3 md:ml-2  fill-black dark:fill-white " />
+                <Settings class="w-6 h-6 sm:ml-4 mr-3 md:ml-2 fill-current hover:fill-white fill-black dark:fill-white " />
               </div>
               <p className="block sm:hidden  w-[100px] sm:w-[0]">Settings</p>
             </button>
-          </Link>
         </div>
 
       </div>
