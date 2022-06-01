@@ -1,5 +1,6 @@
 import React, { useState, useMemo, createContext } from "react";
 
+// create pagesMapping for routing them
 export const pagesMapping = {
   home: "home",
   campaigns: "campaigns",
@@ -10,6 +11,7 @@ export const pagesMapping = {
   search: "search",
 };
 
+// create Route provider
 export const RoutingContext = createContext({ page: pagesMapping.home });
 
 export default function Router({ children }) {
