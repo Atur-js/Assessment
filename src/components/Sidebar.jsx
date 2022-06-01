@@ -1,11 +1,13 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import React, {useContext} from "react";
 import Toggle from "./Theme/Toggle";
+import { RoutingContext, pagesMapping } from '../Route';
 import { ReactComponent as Settings } from "../assets/settings.svg";
 import { ReactComponent as Campaigns } from "../assets/campaign.svg";
 
 export const Sidebar = () => {
 
+  // routing pages
+   const { setPage } = useContext(RoutingContext);
   // sidebar--- add toggle Dark/lite mode, campaigns, settings
 
   return (
@@ -18,8 +20,8 @@ export const Sidebar = () => {
         </div>
 
         <div className="pl-3 sm:pl-1 mt-10 fill-black dark:fill-white hover:fill-white">
-          <Link to="/campaigns">
-            <button className=" hover:fill-white dark:text-white sm:-ml-1
+          
+            <button onClick={() => setPage(pagesMapping.campaigns)} className=" hover:fill-white dark:text-white sm:-ml-1
               md:-ml-5 w-[150px] md:w-[140px] sm:w-[70px] flex justify-center
               bg-transparent hover:text-white  hover:bg-[#6864CF] text-black
               font-semibold  py-2  px-2  hover:border-transparent rounded-lg">
@@ -33,12 +35,11 @@ export const Sidebar = () => {
               </p>
 
             </button>
-          </Link>
+          
         </div>
 
         <div className="pl-3 sm:pl-1">
-          <Link to="/settings">
-            <button
+            <button onClick={() => setPage(pagesMapping.settings)}
               class="dark:text-white flex justify-center bg-transparent
               hover:text-white hover:bg-[#6864CF] text-black font-semibold  py-2
               px-4 hover:border-transparent rounded-lg w-[150px] sm:w-[70px] md:w-[100px]
