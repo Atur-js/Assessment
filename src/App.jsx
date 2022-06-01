@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { pagesMapping, RoutingContext } from './Route';
 import { Sidebar } from "./components/Sidebar";
-import {  Route, Routes, Navigate } from "react-router-dom";
 import { Campaigns } from "./components/Campaigns/Campaigns";
 import { Home } from "./components/Campaigns/Home";
 import { Google } from "./components/Campaigns/Google";
