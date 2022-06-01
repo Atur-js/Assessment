@@ -8,7 +8,7 @@ As a user, you can route  campaigns and settings pages,
 you can switch Dark/lite theme.
 Also you can search in web, what you want!
 
-Assessment App is a Progressive Web App. enjoy!
+
 
 
 
