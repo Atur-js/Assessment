@@ -1,4 +1,5 @@
-
+import { useContext } from 'react';
+import { pagesMapping, RoutingContext } from './Route';
 import { Sidebar } from "./components/Sidebar";
 import {  Route, Routes, Navigate } from "react-router-dom";
 import { Campaigns } from "./components/Campaigns/Campaigns";
@@ -11,6 +12,10 @@ import Search from "./components/Search/Search";
 import {Pipedrive} from "./components/Campaigns/Pipedrive";
 
 function App() {
+
+  // useContext for routing pages
+  
+  const { page } = useContext(RoutingContext);
   return (
     <>
       <ThemeProvider>
@@ -21,16 +26,13 @@ function App() {
             shadow-[0_20px_70px_5px_rgba(0,0,0,0.5)]"
           >
             <Sidebar />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/campaigns" element={<Campaigns />} />
-              <Route path="/google" element={<Google />} />
-              <Route path="/campaigns/hubspot" element={<Hubspot />} />
-              <Route path="/campaigns/search" element={<Search />} />
-              <Route path="/campaigns/pipedrive" element={<Pipedrive />} />
-              <Route path="/settings" element={<Settings />} />
-              <Route path="/*" element={<Navigate to="/" />} />
-            </Routes>
+            {(pagesMapping.home === page) && <Home />}
+            {(pagesMapping.campaigns === page) && <Campaigns />}
+            {(pagesMapping.settings === page) && <Settings />}
+            {(pagesMapping.google === page) && <Google />}
+            {(pagesMapping.hubspot === page) && <Hubspot />}
+            {(pagesMapping.pipedrive === page) && <Pipedrive />}
+            {(pagesMapping.search === page) && <Search />}
           </div>
         </div>
       </ThemeProvider>
